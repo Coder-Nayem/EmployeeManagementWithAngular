@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>False</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\package.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\_metadata.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.vscode\extensions.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.vscode\launch.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.vscode\tasks.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.vs\ProjectSettings.json" />
+    <Content Include="ClientSide.NG\ngAppClient\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\ngAppClient\.tsbuildinfo" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_common.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_common.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_common_http.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_common_http.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_core.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_core.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_forms.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_forms.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_platform-browser.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_platform-browser.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_router.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\%40angular_router.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-2M55P2PR.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-2M55P2PR.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-A6ZBE6ZR.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-A6ZBE6ZR.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-ORNJK7UO.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-ORNJK7UO.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-UHHVTA4Y.js" />
+    <None Include="ClientSide.NG\ngAppClient\.angular\cache\17.2.0\vite\deps\chunk-UHHVTA4Y.js.map" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\config\applicationhost.config" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\FileContentIndex\3f46a66f-db89-4e6c-8542-a7f8db8157ff.vsidx" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\FileContentIndex\4d8fbfe9-d1fc-4e5d-b322-228515c3ea1d.vsidx" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\FileContentIndex\83d3d445-a2a9-49bc-8fa5-daebd09b98c4.vsidx" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\FileContentIndex\8e5e27c0-752e-4091-93e6-840632185127.vsidx" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\FileContentIndex\eae235d8-4c53-4f6d-a70e-121c5b61109e.vsidx" />
+    <None Include="ClientSide.NG\ngAppClient\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientSide.NG\ngAppClient\.vs\ngAppClient\v17\" />
+  </ItemGroup>
+
+</Project>

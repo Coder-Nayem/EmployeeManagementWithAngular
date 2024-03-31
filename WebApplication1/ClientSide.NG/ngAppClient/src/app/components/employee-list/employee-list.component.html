@@ -1,0 +1,42 @@
+
+<a routerLink="/add" class="btn btn-info">Add New</a>
+<button class="btn btn-primary" (click)="LoadData()">Refresh</button>
+<hr />
+<table class="table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Join Date</th>
+            <th>Active</th>
+            <th>Experiences</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of empList">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.designation.name | uppercase}}</td>
+            <td>{{employee.salary | currency}}</td>
+            <td>{{employee.joinDate | date}}</td>
+            <td>
+
+                <input disabled type="checkbox" name="isActive" [(ngModel)]="employee.isActive" />
+            </td>
+            <td>
+                <ul>
+                    <li *ngFor="let exp of employee.experiences">
+                        Company: {{exp.company}} at Position: {{exp.position}} duration ; {{exp.duration}}
+                    </li>
+                </ul>
+            </td>
+            <td class="btn-group">
+                <a [routerLink]="['/edit/', employee.id]" class="btn btn-warning">Edit</a>
+                <button class="btn btn-danger" (click)="DeleteEmployee(employee)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

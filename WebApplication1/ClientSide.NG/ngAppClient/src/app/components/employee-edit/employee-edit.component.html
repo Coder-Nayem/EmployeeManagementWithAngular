@@ -1,0 +1,111 @@
+<form #empForm="ngForm" (submit)="OnSubmit()">
+
+    <div class="form-group row">
+        <label for="name" class="col-md-4">Name</label>
+        <input type="email"
+               id="name"
+               name="name"
+               class="form-control-sm  col-md-8"
+               required
+               minlength="3"
+               [(ngModel)]="model.name"
+               #empName="ngModel" />
+        <div *ngIf="empName.invalid && (empName.dirty && empName.touched)"
+             class="alert">
+            enter valid name
+        </div>
+
+    </div>
+
+
+    <div class="form-group row">
+
+        <label for="Designation" class="col-md-4">Designation:</label>
+
+        <select id="Designation" class="form-control-sm col-md-8" name="Designation"
+                required [(ngModel)]="model.designationId"
+                #designationId="ngModel">
+
+            <option *ngFor="let designation of designationList" [value]="designation.id">{{designation.name}}</option>
+        </select>
+        <span class="badge text-danger" *ngIf="designationId.invalid && designationId.errors?.['required']">
+            designation  required
+        </span>
+    </div>
+    <div class="row">
+
+        <label for="joindate">Join date:</label>
+
+        <input id="joindate" name="joinDate" type="datetime-local" [(ngModel)]="model.joinDate" />
+    </div>
+    <div class="row">
+
+        <label for="salary">Salary:</label>
+
+        <input id="salary" class="form-control" name="salary" [(ngModel)]="model.salary"
+               #salary="ngModel" />
+
+        <span class="badge text-danger" *ngIf="salary.invalid && salary.errors?.['required']">
+            salary  required
+        </span>
+    </div>
+    <div class="row">
+
+        <label for="active">Active? :</label>
+
+        <input id="active" type="checkbox" name="isActive" [(ngModel)]="model.isActive" />
+
+    </div>
+
+
+
+    <table class="table table-responsive-sm table-striped">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Position</th>
+                <th>Duration</th>
+                <th>
+                    <button type="button" class="btn btn-info" (click)="AddExp()">Add Experience</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let experience of model.experiences; let i = index">
+                <td class="form-group">
+                    <input type="text"
+                           name="company[{{i}}]"
+                           class="form-control"
+                           required
+                           [(ngModel)]="experience.company" />
+
+                </td>
+                <td class="form-group">
+                    <input type="text"
+                           name="position[{{i}}]"
+                           class="form-control"
+                           required
+                           [(ngModel)]="experience.position" />
+
+                </td>
+                <td class="form-group">
+                    <input type="text"
+                           name="duration[{{i}}]"
+                           class="form-control"
+                           required
+                           [(ngModel)]="experience.duration" />
+
+                </td>
+                <td>
+                    <button type="button" class="btn btn-warning" (click)="DeleteExp(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr />
+    <button type="submit" [disabled]="empForm.invalid">Save</button><!-- [disabled]="empForm.invalid" -->
+
+
+</form>
